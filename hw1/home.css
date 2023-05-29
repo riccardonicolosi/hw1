@@ -1,0 +1,431 @@
+body{
+    background-color: #F4F5F3;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #F4F5F3;
+  }
+  
+  header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('assets/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  header nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #logo{
+    font-size: 36px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+  }
+  
+  #links a{
+    margin: 15px;
+    text-decoration: none;
+  }
+
+  #links a:visited { 
+  text-decoration: none; 
+  color: #F4F5F3; 
+ }
+
+  
+  @media (max-width: 500px) {
+    #links {
+      display: none;
+    }
+  }
+  
+  #separator{
+    display: inline-block;
+    height: 16px;
+    width: 1px;
+    background: currentColor;
+  }
+  
+  #menu {
+    display: none;
+  }
+  
+  #menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #F4F5F3;
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 500px) {
+    #menu {
+      display: block;
+    }
+  }
+  
+  .button{
+    background-color: #39B7A8;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: 221F28;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  header h1{
+    z-index: 1;
+    font-size: 3em;
+  }
+  
+  @media (max-width: 500px) {
+    header h1 {
+      font-size: 2em;
+      padding: 0 30px;
+    }
+  }
+  
+  .subtitle{
+    z-index: 1;
+    font-size: 18px
+  }
+  
+  @media (max-width: 500px) {
+    .subtitle {
+      padding: 0 30px;
+    }
+  }
+  
+  section h1{
+    margin-left: 30px;
+    margin-top: 100px
+  }
+
+  #search input[type=submit]{
+    display: none;
+}
+  
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center
+  }
+  
+  @media (max-width: 500px) {
+    .container{
+      height: auto;
+      flex-direction: column;
+    }
+  }
+
+  #results{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+  
+  .recipe{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 20%;
+    background-color: #39B7A8;
+    border-radius: 8px;
+    margin: 15px;
+    transition: width 0.5s, background-color 0.5s;
+  }
+  
+  .recipe:hover{
+    background-color: #221F28;
+  }
+
+  .infoPiatto{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoPiatto:hover + .saveForm{
+    opacity: 1;
+  }
+
+  .saveForm{
+    opacity: 0;
+  }
+
+  .saveForm:hover{
+    opacity: 1;
+  }
+
+  .save{
+    width: 50px;
+    height: 50px;
+    background-color: #221F28;
+    position: absolute;
+    transition: opacity 0.3s;
+    margin-left: -60px;
+    color: rgba(255, 355, 255, 0);
+    margin-top: 200px;
+    border: none;
+    border-radius: 50px;
+    background: rgb(0 0 0 / 50%) url(assets/heart.svg) 10px 12px no-repeat;
+    background-size: 30px 30px;
+  }
+
+
+
+  .saveIcon{
+    margin-left: -50px;
+    padding-top: 212px;
+    width: 30px;
+    box-shadow: none;
+    position: absolute;
+  }
+  
+  .uriInfo, .dishInfo{
+    display: none;
+  }
+  
+  .uriInfo p{
+    margin-top: 0;
+  }
+
+  */
+
+  .infoContainer{
+    min-height: 62px;
+  }
+  
+  .show{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .selected{
+    position: fixed;
+    width: 50%;
+    height: auto;
+    z-index: 10;
+    left: 25%;
+    top: 25%;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+  }
+  
+  .unselected{
+    height: 50%;
+  }
+ 
+  @media (max-width: 500px) {
+    .artisti, .canzoni {
+      width: auto;
+      margin: 0 auto 30px;
+    }
+  }
+
+  .recipe a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  strong{
+    font-size: 18px;
+    margin-top: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .showTitle{
+    overflow: visible;
+  }
+
+  img{
+    width: 100%;
+    max-width: 260px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+    transition: width 0.2s;
+  }
+  
+  .img-selected{
+    width: 80%;
+    max-width: 260px;
+  }
+  
+  footer{
+    background-color: #AE5D35;
+    padding: 50px 0 20px;
+  }
+  
+  footer nav{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 500px) {
+    footer nav {
+      margin: 0 30px;
+    }
+  }
+  
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  @media (max-width: 500px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  }
+  
+  .footer-col{
+    padding: 0 15px;
+    height: 100%;
+  }
+  
+  @media (max-width: 500px) {
+    .footer-col {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+  
+  footer h1{
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  
+  .footer-col strong{
+    display: flex;
+    color: #221F28;
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  
+  .footer-col p{
+    font-size: 18px;
+    padding: 3px 0 15px;
+    margin: 0;
+  }
+  
+  .infoContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .infoSelected{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 230px;
+  }
+  
+  .icon{
+  width: 10%;
+  max-width: 30px;
+  }
+  
+  .favoriteCard{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 20%;
+    height: 85%;
+    background-color: #221F28;
+    border-radius: 8px;
+    margin-right: 30px;
+  }
+  
+  .hidden{
+  display:none;
+  }
+  
+  .detail{
+  margin-top: 10px;
+  }
+  
+  .search{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  }
+  
+  .search label{
+  color: #AE5D35;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  }
+
+  .search input:focus{
+    outline: none;
+  }
+  
+  .searchBar{
+  font-size: 16px;
+  width: 50%;
+  height: 50px;
+  padding: 16px 14px 18px;
+  border: 2px solid #221F28;
+  border-radius: 50px;
+  margin-top: 5px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  }
+  
+  .sectionTitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  

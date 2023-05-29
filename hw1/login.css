@@ -1,0 +1,150 @@
+body{
+    background-color: #F4F5F3;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #221F28;
+  }
+
+
+#logo{
+    font-size: 44px;
+    font-weight: bold;
+    font-family: 'Fjalla One', sans-serif;
+    border-bottom: 10px solid #AE5D35;
+    padding: 25px 0 25px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  h5{
+      font-size: 18px;
+  }
+
+  .error{
+    display: block;
+    background-color: #39B7A8;
+    padding: 14px 14px 12px;
+    color: #F4F5F3;
+    font-size: 14px;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  form{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F4F5F3;
+  }
+
+  main{
+      text-align: center;
+      margin: 0 auto;
+      max-width: 450px;
+  }
+
+  .username, .password{
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  input{
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    border: 1px solid #AE5D35;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .submit-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .remember{
+    display: flex;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+  }
+
+  .remember input{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  .remember label{
+    font-size: 18px;
+    padding-left: 10px;
+    color: #AE5D35;
+    margin-top: 3px;
+  }
+
+  .login-button{
+    width: 100%;
+    padding-right: 15px;
+  }
+
+  .login-button input{
+    margin-top: 30px;
+    border-radius: 50px;
+    padding: 16px 14px 18px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #F4F5F3;
+    background-color: #AE5D35;
+    transition-property: background-color;
+    transition-duration: .3s;
+  }
+
+  .login-button input:hover{
+    cursor: pointer;
+    background-color: #BB805E;
+  }
+
+  .signup{
+    margin: 10px 0;
+  }
+
+  h4{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .signup-btn-container{
+    padding-right: 30px;
+  }
+
+  .signup-btn{
+    display: block;
+    border-radius: 50px;
+    border: 3px solid #BB805E;
+    padding: 16px 14px 18px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #AE5D35;
+    line-height: 1;
+    letter-spacing: 1px;
+    width: 100%;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+  }
+
+  .signup-btn:hover{
+    border-radius: 50px;
+    background-color: #BB805E;
+    color: #F4F5F3;
+    padding: 16px 14px 18px;
+  }
+

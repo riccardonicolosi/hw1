@@ -1,0 +1,150 @@
+body{
+    background-color: #F4F5F3;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #221F28;
+  }
+
+  #logo{
+    font-size: 44px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+    border-bottom: 10px solid #AE5D35;
+    padding: 25px 0 25px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+main{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    padding: 6px 1px;
+    border: 1px solid #AE5D35;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .name, .surname, .username, .email, .password, .confirm_password, .fileupload{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.allow{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.allow input{
+    width: 20px;
+    height: 20px;
+}
+
+.allow label{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+form img{
+    opacity: 0;
+    width: 10px;
+    margin-right: 10px;
+}
+
+form span {
+    opacity: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    transition: opacity .5s ease;
+}
+
+.errorj label {
+    color: #39B7A8;
+}
+
+.errorj span {
+    opacity: 1;
+    font-size: 14px;
+    color: #39B7A8;
+}
+
+.errorj img {
+    opacity: 1;
+}
+
+.errorj input, .errorj #upload {
+    border-color: #39B7A8;
+}
+
+.submit input{
+    margin-top: 30px;
+    border-radius: 50px;
+    padding: 16px 14px 18px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #F4F5F3;
+    background-color: #AE5D35;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.submit input:hover{
+    cursor: pointer;
+    background-color: #BB805E;
+}
+
+.signup{
+    margin: 10px 0;
+  }
+
+  h4{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .signup-btn-container{
+    padding-right: 30px;
+  }
+
+  .signup-btn{
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    border: 3px solid #BB805E;
+    padding: 16px 14px 18px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #AE5D35;
+    line-height: 1;
+    letter-spacing: 1px;
+    width: 100%;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+  }
+
+  .signup-btn:hover{
+    border-radius: 50px;
+    background-color: #BB805E;
+    color: #F4F5F3;
+    padding: 16px 14px 18px;
+  }
